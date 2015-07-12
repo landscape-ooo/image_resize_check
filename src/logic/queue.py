@@ -38,7 +38,7 @@ class loadDataSpring(object):
         return  return_list   
     def getQueueData(self):
         jsonText = ""
-        file = open("/data/workspace/python_local/image_check_valid/src/logic/jsondec.json")
+        file = open(  os.path.dirname(os.path.realpath(__file__))+"/jsondec.json")
         for line in file.xreadlines():
             jsonText += line
         postdata = json.loads(jsonText)
