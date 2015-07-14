@@ -44,11 +44,16 @@ class HttpHelper(object):
         return  None    
     
     
+    def getNewSohuuri(self,uri):
+        p = urlparse.urlparse(uri)
+        sohu_uri = p._replace(netloc=p.netloc.replace(p.hostname, 'testganji.bjcnc.img.sohucs.com')).geturl()
+        return sohu_uri
+
+
     def getSohuuri(self,uri):
         p = urlparse.urlparse(uri)
         sohu_uri = p._replace(netloc=p.netloc.replace(p.hostname, 'scs.ganjistatic1.com')).geturl()
         return sohu_uri
-
 
         
     def processByCurlCallback(self, sohu_uri,uri):

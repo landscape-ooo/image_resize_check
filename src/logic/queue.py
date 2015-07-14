@@ -5,6 +5,7 @@ Created on 2015年7月8日
 
 @author: a11
 '''
+import os
 import pycurl
 import json
 import StringIO
